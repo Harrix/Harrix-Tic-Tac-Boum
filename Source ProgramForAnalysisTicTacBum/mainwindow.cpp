@@ -49,51 +49,6 @@ void MainWindow::on_pushButton_clicked()
     ui->textEdit->insertPlainText("Найдено слов = "+QString::number(s)+"\n");
 }
 
-QString HQt_RandomRussianLetter()
-{
-    /*
-        Функция генерирует случайную русскую букву в нижнем регистре.
-        Входные параметры:
-         Отсутствуют.
-        Возвращаемое значение:
-         Случайная русская буква.
-        Примечание:
-         Используются случайные числа, так что рекомендуется вызвать в программе иницилизатор случайных чисел qsrand.
-         Рекомендую так:
-         qsrand(QDateTime::currentMSecsSinceEpoch () % 1000000);
-        */
-    QString VHQt_Result;
-    QString Alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
-
-    int randomNumber = qrand() % Alphabet.length();
-
-    VHQt_Result = Alphabet.at(randomNumber);
-
-    return VHQt_Result;
-}
-
-QString HQt_RussianLetter(int i)
-{
-    /*
-        Функция генерирует русскую букву в нижнем регистре по номеру ее в алфавите.
-        Входные параметры:
-         Отсутствуют.
-        Возвращаемое значение:
-         Русская буква.
-        */
-    QString VHQt_Result;
-    QString Alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
-
-    VHQt_Result = Alphabet.at(i);
-
-    return VHQt_Result;
-}
-
-void MainWindow::on_pushButton_2_clicked()
-{
-    stopSearch = true;
-}
-
 void MainWindow::on_pushButton_4_clicked()
 {
     ui->textEdit->clear();

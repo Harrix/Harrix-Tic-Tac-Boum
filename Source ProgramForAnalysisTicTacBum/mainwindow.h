@@ -30,7 +30,4 @@ private:
     bool stopSearch;
 };
 
-QString HQt_RandomRussianLetter();
-QString HQt_RussianLetter(int i);
-
 #endif // MAINWINDOW_H
